@@ -19,7 +19,7 @@ public class DctrSpaceHelm extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        getCommand("shelmet").setExecutor(new DctrSpaceHelmCMD());
+        getCommand("spacehelm").setExecutor(new DctrSpaceHelmCMD());
         getServer().getPluginManager().registerEvents(new DctrSpaceHelmListener(), this);
 
         List<Material> colors = new ArrayList<>();
