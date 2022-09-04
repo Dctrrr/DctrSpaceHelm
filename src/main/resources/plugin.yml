@@ -1,8 +1,0 @@
-name: DctrSpaceHelm
-version: '${project.version}'
-main: spacehelm.dctrspacehelm.DctrSpaceHelm
-api-version: 1.16
-commands:
-  spacehelm:
-    permission: adminitem.spacehelm
-    permission-message: &cYou don't have access to this command!
