@@ -80,6 +80,7 @@ public class DctrSpaceHelm extends JavaPlugin {
     
     @Override
     public void onDisable() {
+        config.setInt("editionNumber", editionNumber);
         saveConfig();
     }
 }
