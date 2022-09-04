@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +16,23 @@ import java.util.Random;
 
 
 public class DctrSpaceHelm extends JavaPlugin {
+    
+    private static JavaPlugin plugin;
+    FileConfiguration config = getConfig();
+    int editionNumber;
+    
+    public static JavaPlugin getInstance() {
+        return plugin;
+    }
 
     @Override
     public void onEnable() {
+        plugin = this;
+        
+        config.addDefault("editionNumber", 1);
+        config.options().copyDefaults(true);
+        this.saveConfig();
+        editionNumber = config.getInt("editionNumber");
 
         getCommand("spacehelm").setExecutor(new DctrSpaceHelmCMD());
         getServer().getPluginManager().registerEvents(new DctrSpaceHelmListener(), this);
@@ -61,5 +76,10 @@ public class DctrSpaceHelm extends JavaPlugin {
                 }
             }
         }.runTaskTimer(this, 20, 20);
+    }
+    
+    @Override
+    public void onDisable() {
+        saveConfig();
     }
 }
