@@ -1,0 +1,9 @@
+name: DctrSpaceHelm
+version: '${project.version}'
+main: spacehelm.dctrspacehelm.DctrSpaceHelm
+api-version: 1.16
+depend: [GKSkyblock, PlaceholderAPI, ProtocolLib, Vault]
+commands:
+  spacehelm:
+    permission: adminitem.spacehelm
+    permission-message: You don't have access to this command!
