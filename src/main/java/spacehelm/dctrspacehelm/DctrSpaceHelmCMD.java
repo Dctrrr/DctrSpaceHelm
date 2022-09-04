@@ -3,6 +3,7 @@ package spacehelm.dctrspacehelm;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.plugin.JavaPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,7 +16,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DctrSpaceHelmCMD implements CommandExecutor {
-
+    
+    JavaPlugin plugin = DctrSpaceHelm.getPlugin();
+        
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -46,7 +49,7 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                         ChatColor.DARK_GRAY + "To: " + player.getDisplayName(),
                         ChatColor.DARK_GRAY + "From: " + ChatColor.RED + "[ADMIN] " + ((Player)sender).getDisplayName(),
                         " ",
-                        ChatColor.DARK_GRAY + "Edition: #001",
+                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber++),
                         " ",
                         ChatColor.RED + "" + ChatColor.BOLD + "SPECIAL"
 
