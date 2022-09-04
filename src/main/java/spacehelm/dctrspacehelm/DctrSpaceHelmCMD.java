@@ -39,8 +39,8 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                 itemMeta.setDisplayName(ChatColor.RED + "Dctr's Space Helmet");
 
                 itemMeta.setLore(Arrays.asList(
-                        ChatColor.GRAY + "" + ChatColor.ITALIC + "Drop this item to decrease your FPS",
-                        ChatColor.GRAY + "" + ChatColor.ITALIC + "Immune to drops.",
+                        ChatColor.GRAY + "" + ChatColor.ITALIC + "A rare space helmet forged",
+                        ChatColor.GRAY + "" + ChatColor.ITALIC + "from shards of moon.",
                         " ",
                         ChatColor.DARK_GRAY + "To: " + player.getDisplayName(),
                         ChatColor.DARK_GRAY + "From: " + ChatColor.RED + "[ADMIN] " + ((Player)sender).getDisplayName(),
