@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 public class DctrSpaceHelmCMD implements CommandExecutor {
     
-    JavaPlugin plugin = DctrSpaceHelm.getPlugin(DctrSpaceHelm.class);
+    JavaPlugin plugin = DctrSpaceHelm.getInstance();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
