@@ -18,15 +18,6 @@ import java.util.Random;
 public class DctrSpaceHelm extends JavaPlugin {
     
     private static DctrSpaceHelm plugin;
-    private int editionNumber;
-
-    public void setEditionNumber(int newEdition) {
-        this.editionNumber = newEdition;
-    }
-
-    public int getEditionNumber() {
-        return this.editionNumber;
-    }
 
     FileConfiguration config = getConfig();
     int editionNumber;
