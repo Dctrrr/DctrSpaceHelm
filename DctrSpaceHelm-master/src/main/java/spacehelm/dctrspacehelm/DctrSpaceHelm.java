@@ -16,26 +16,18 @@ import java.util.Random;
 
 
 public class DctrSpaceHelm extends JavaPlugin {
-    
-    private static DctrSpaceHelm plugin;
 
     FileConfiguration config = getConfig();
-    int editionNumber;
-    
-    public static JavaPlugin getInstance() {
-        return plugin;
-    }
+    public int editionNumber;
 
     @Override
     public void onEnable() {
-        plugin = this;
-        
         config.addDefault("editionNumber", 1);
         config.options().copyDefaults(true);
         this.saveConfig();
         editionNumber = config.getInt("editionNumber");
 
-        getCommand("spacehelm").setExecutor(new DctrSpaceHelmCMD());
+        getCommand("spacehelm").setExecutor(new DctrSpaceHelmCMD(this));
         getServer().getPluginManager().registerEvents(new DctrSpaceHelmListener(), this);
 
         List<Material> colors = new ArrayList<>();
