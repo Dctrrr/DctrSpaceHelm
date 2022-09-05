@@ -49,7 +49,7 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                         ChatColor.DARK_GRAY + "To: " + player.getDisplayName(),
                         ChatColor.DARK_GRAY + "From: " + ChatColor.RED + "[ADMIN] " + ((Player)sender).getDisplayName(),
                         " ",
-                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.getConfig()),
+                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber++),
                         " ",
                         ChatColor.RED + "" + ChatColor.BOLD + "SPECIAL"
 
@@ -58,7 +58,7 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                 itemStack.setItemMeta(itemMeta);
                 player.getInventory().setHelmet(new ItemStack(itemStack));
                 itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-                player.sendMessage(((Player)sender).getName() + "§egave you a§e §cDctr's Space Helmet§c (§e001)§e!");
+                player.sendMessage(ChatColor.RED + ((Player)sender).getName() + " §egave you a§e §cDctr's Space Helmet§c (§e001)§e! ");
             } else {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cYou don't have access to this command!"));
             }
