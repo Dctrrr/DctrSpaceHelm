@@ -53,16 +53,16 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                         ChatColor.DARK_GRAY + "To: " + player.getDisplayName(),
                         ChatColor.DARK_GRAY + "From: " + ChatColor.RED + "[ADMIN] " + ((Player)sender).getDisplayName(),
                         " ",
-                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber++),
+                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber),
                         " ",
                         ChatColor.RED + "" + ChatColor.BOLD + "SPECIAL"
-
                 ));
 
                 itemStack.setItemMeta(itemMeta);
                 player.getInventory().setHelmet(new ItemStack(itemStack));
                 itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
-                player.sendMessage(ChatColor.RED + ((Player)sender).getName() + " §egave you a§e §cDctr's Space Helmet§c (§e001)§e! ");
+                player.sendMessage(ChatColor.RED + ((Player)sender).getName() + " §egave you a§e §cDctr's Space Helmet§c " + ChatColor.GOLD + "#" + (plugin.editionNumber) + ChatColor.GOLD + "!");
+                plugin.editionNumber += 1;
             } else {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cYou don't have access to this command!"));
             }
@@ -70,4 +70,3 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
         return true;
     }
 }
-
