@@ -58,10 +58,10 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                 if (formattedMonth.length() > 0) formattedMonth = formattedMonth.substring(0, 1).toUpperCase() + formattedMonth.substring(1);
                 itemMeta.setLore(Arrays.asList(
                         ChatColor.RESET + "" + ChatColor.GRAY + ChatColor.ITALIC + "A rare space helmet forged",
-                        ChatColor.RESET + "" + ChatColor.DARK_GRAY + ChatColor.ITALIC + "from shards of moon.",
+                        ChatColor.RESET + "" + ChatColor.GRAY + ChatColor.ITALIC + "from shards of moon.",
                         " ",
-                        ChatColor.RESET + "" + ChatColor.GRAY + "To: " + PlaceholderAPI.setPlaceholders(player,  " %vault_prefix_color% " + " %vault_rank_capital%  " + " %vault_rankprefix% ") + player.getDisplayName(),
-                        ChatColor.RESET + "" + ChatColor.GRAY + "From: " + PlaceholderAPI.setPlaceholders(player," %vault_prefix_color% " + " %vault_rank_capital%  " + " %vault_rankprefix% ") + ((Player)sender).getDisplayName(),
+                        ChatColor.RESET + "" + ChatColor.GRAY + "To: " + PlaceholderAPI.setPlaceholders(player,  " %vault_rank_capital%  " + " %vault_rankprefix% ") + player.getDisplayName(),
+                        ChatColor.RESET + "" + ChatColor.GRAY + "From: " + PlaceholderAPI.setPlaceholders(player, " %vault_rank_capital%  " + " %vault_rankprefix% ") + ((Player)sender).getDisplayName(),
                         " ",
                         ChatColor.RESET + "" + ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber),
                         "",
