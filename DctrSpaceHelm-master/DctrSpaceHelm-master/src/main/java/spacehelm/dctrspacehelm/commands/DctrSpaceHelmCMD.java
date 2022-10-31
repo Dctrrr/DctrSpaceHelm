@@ -1,24 +1,30 @@
 package spacehelm.dctrspacehelm.commands;
 
 import me.clip.placeholderapi.PlaceholderAPI;
+import net.minecraft.server.v1_8_R3.NBTTagCompound;
+import net.minecraft.server.v1_8_R3.NBTTagList;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import spacehelm.dctrspacehelm.DctrSpaceHelm;
+import java.time.LocalDateTime;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class DctrSpaceHelmCMD implements CommandExecutor {
-    
+    private LocalDateTime time = LocalDateTime.now();
+
     DctrSpaceHelm plugin;
     
     public DctrSpaceHelmCMD(DctrSpaceHelm plugin) {
@@ -48,15 +54,18 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
                 ItemMeta itemMeta = itemStack.getItemMeta();
                 itemMeta.setDisplayName(ChatColor.RED + "Dctr's Space Helmet");
 
+                String formattedMonth = time.getMonth().toString().toLowerCase();
+                if (formattedMonth.length() > 0) formattedMonth = formattedMonth.substring(0, 1).toUpperCase() + formattedMonth.substring(1);
                 itemMeta.setLore(Arrays.asList(
-                        ChatColor.GRAY + "" + ChatColor.ITALIC + "A rare space helmet forged",
-                        ChatColor.GRAY + "" + ChatColor.ITALIC + "from shards of moon.",
+                        ChatColor.RESET + "" + ChatColor.GRAY + ChatColor.ITALIC + "A rare space helmet forged",
+                        ChatColor.RESET + "" + ChatColor.DARK_GRAY + ChatColor.ITALIC + "from shards of moon.",
                         " ",
-                        ChatColor.DARK_GRAY + "To: " + ChatColor.GRAY + PlaceholderAPI.setPlaceholders(player, " [ %vault_rank% ] ") + player.getDisplayName(),
-                        ChatColor.DARK_GRAY + "From: " + ChatColor.RED + PlaceholderAPI.setPlaceholders(player," [ %vault_rank% ] ") + ((Player)sender).getDisplayName(),
+                        ChatColor.RESET + "" + ChatColor.GRAY + "To: " + PlaceholderAPI.setPlaceholders(player,  " %vault_prefix_color% " + " %vault_rank_capital%  " + " %vault_rankprefix% ") + player.getDisplayName(),
+                        ChatColor.RESET + "" + ChatColor.GRAY + "From: " + PlaceholderAPI.setPlaceholders(player," %vault_prefix_color% " + " %vault_rank_capital%  " + " %vault_rankprefix% ") + ((Player)sender).getDisplayName(),
                         " ",
-                        ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber),
-                        ChatColor.DARK_GRAY + "Year: Coming Soon",
+                        ChatColor.RESET + "" + ChatColor.DARK_GRAY + "Edition: #" + (plugin.editionNumber),
+                        "",
+                        ChatColor.RESET + "" + ChatColor.DARK_GRAY  + "Year: " + formattedMonth + " " + time.getYear(),
                         " ",
                         ChatColor.RED + "" + ChatColor.BOLD + "SPECIAL"
                 ));
@@ -72,4 +81,5 @@ public class DctrSpaceHelmCMD implements CommandExecutor {
         }
         return true;
     }
+
 }
