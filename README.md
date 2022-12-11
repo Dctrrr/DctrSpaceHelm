@@ -8,4 +8,7 @@ This plugin aims to remake all the admin items for hypixel skyblock which may in
 /spacehelm <player> - adminitem.spacehelm
 
 # Upcoming Updates
-5.4 
+**Version 5.4**
+  **Features added**
+  [+] GKSkyblock Support
+  [+] Addition of the rest of the rewards given
