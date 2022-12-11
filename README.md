@@ -9,9 +9,13 @@ This plugin aims to remake all the admin items for hypixel skyblock which may in
 
 # Upcoming Updates
 **Version 5.4**
+  
 **Features added**
+  
 [+] GKSkyblock Support
 [+] Addition of the rest of the rewards given
+  
 **Features removed**
+  
 [-] DctrAPI
 [-] Unecessary files
