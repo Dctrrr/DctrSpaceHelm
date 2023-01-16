@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/DctrSpaceHelm-master/DctrSpaceHelm.iml" filepath="$PROJECT_DIR$/DctrSpaceHelm-master/DctrSpaceHelm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/DctrSpaceHelm-master.iml" filepath="$PROJECT_DIR$/.idea/DctrSpaceHelm-master.iml" />
-    </modules>
-  </component>
-</project>
