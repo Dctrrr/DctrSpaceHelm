@@ -6,14 +6,14 @@
 
     <groupId>SpaceHelm</groupId>
     <artifactId>DctrSpaceHelm</artifactId>
-    <version>5.4</version>
+    <version>5.3</version>
     <packaging>jar</packaging>
 
     <name>DctrSpaceHelm</name>
 
     <properties>
         <build>Pre-Release</build>
-        <java.version>16</java.version>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -69,10 +69,6 @@
         <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
-        </repository>
-        <repository>
-            <id>spigotmc-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
 
