@@ -10,7 +10,8 @@ import spacehelm.dctrspacehelm.listeners.ItemsGUI;
 public class ItemsGUICMD implements CommandExecutor {
   @Override
   public boolean onCommand (CommandSender sender, Command command, String label, String[] args) {
-    sender.sendMessage ("Unable to load gui...");
+           ItemsGUI gc = new ItemsGUI();
+           player.openInventory(ItemsGUI.inv);
    return true;
   }
 }
