@@ -1,0 +1,12 @@
+name: DctrSpaceHelm
+version: '${project.version}'
+main: spacehelm.dctrspacehelm.DctrSpaceHelm
+api-version: 1.16
+depends: [PlaceholderAPI]
+commands:
+  spacehelm:
+    permission: skyblock.spacehelm
+    permission-message: You don't have access to this command!
+  deliverhelm:
+      permission: skyblock.deliverhelm
+      permission-message: You don't have access to this command!
